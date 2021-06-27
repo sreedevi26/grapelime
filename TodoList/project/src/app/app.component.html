@@ -1,0 +1,12 @@
+<router-outlet></router-outlet>
+<input type="text" #newTodo/>
+<button (click)="addTodo(newTodo.value);newTodo.value=''">Add</button>
+<table>
+  <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  
+  
+  <div class="example-box" *ngFor="let addTodo  of movies" cdkDrag>{{addTodo}}</div>
+</div>
+
+</table>  
+  
